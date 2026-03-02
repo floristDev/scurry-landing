@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-acorn: #8B5A2B;
+  --color-acorn-light: #A0632B;
+  --color-acorn-dark: #5C3A1E;
+  --color-bark: #3E2723;
+  --color-leaf: #2D6A4F;
+  --color-leaf-light: #40916C;
+  --color-moss: #95D5B2;
+  --color-cream: #FFF8F0;
+  --color-cream-dark: #F5E6D3;
+  --color-sunset: #E76F51;
+  --color-golden: #F4A261;
+  --color-sky: #044557;
+  --color-mauve: #af4978;
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  30% { transform: translate(3%, -15%); }
+  50% { transform: translate(12%, 9%); }
+  70% { transform: translate(9%, 4%); }
+  90% { transform: translate(-1%, 7%); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #F4A261;
+  color: #3E2723;
+}
+
+body {
+  font-family: var(--font-body);
+}

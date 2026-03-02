@@ -1,0 +1,294 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Grain texture overlay -->
+  <div class="pointer-events-none fixed inset-0 z-50 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-cream/80 border-b border-bark/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="text-2xl font-bold font-[family-name:var(--font-display)] text-bark tracking-tight">scurry</span>
+        <span class="text-xs text-acorn font-mono bg-acorn/10 px-2 py-0.5 rounded-full">beta</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="https://blog.scurry.space" class="text-sm text-bark/60 hover:text-bark transition-colors">Blog</a>
+        <a href="https://app.scurry.space" class="text-sm font-semibold text-cream bg-bark hover:bg-bark/90 px-4 py-2 rounded-full transition-all hover:scale-105">
+          Open App &rarr;
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center pt-16">
+    <!-- Background decorations -->
+    <div class="absolute top-32 left-[10%] w-64 h-64 bg-golden/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-[15%] w-80 h-80 bg-moss/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sunset/5 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="max-w-3xl">
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center gap-2 bg-bark/5 border border-bark/10 rounded-full px-4 py-1.5 mb-8" style="animation: fade-in-up 0.6s ease-out forwards;">
+          <span class="inline-block w-2 h-2 bg-leaf rounded-full animate-pulse"></span>
+          <span class="text-sm text-bark/70 font-mono">for people who learn by doing</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-[family-name:var(--font-display)] leading-[1.05] mb-6" style="animation: fade-in-up 0.8s ease-out 0.1s both;">
+          Stop hoarding tabs.<br/>
+          <span class="text-acorn">Start actually learning.</span>
+        </h1>
+
+        <!-- Subhead -->
+        <p class="text-lg sm:text-xl text-bark/70 max-w-xl mb-10 leading-relaxed" style="animation: fade-in-up 0.8s ease-out 0.25s both;">
+          You've got 47 bookmarked tutorials, 3 half-finished courses, and a YouTube "Watch Later" that's basically a graveyard. Sound familiar?
+        </p>
+        <p class="text-lg sm:text-xl text-bark/70 max-w-xl mb-10 leading-relaxed" style="animation: fade-in-up 0.8s ease-out 0.35s both;">
+          Scurry turns that chaos into a <strong class="text-bark font-semibold">real learning roadmap</strong> — with AI that actually knows where you're going, not just where you've been.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-4" style="animation: fade-in-up 0.8s ease-out 0.45s both;">
+          <a href="https://app.scurry.space" class="group inline-flex items-center gap-2 bg-bark text-cream font-semibold px-8 py-4 rounded-full text-lg hover:scale-105 transition-all shadow-lg shadow-bark/20 hover:shadow-xl hover:shadow-bark/30">
+            Start Learning
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m13 7 5 5m0 0-5 5m5-5H6"/></svg>
+          </a>
+          <a href="#how-it-works" class="inline-flex items-center gap-2 text-bark/70 font-medium px-6 py-4 rounded-full hover:bg-bark/5 transition-colors">
+            See how it works
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating squirrel placeholder -->
+      <div class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2" style="animation: float 6s ease-in-out infinite;">
+        <div class="w-72 h-72 bg-gradient-to-br from-acorn/10 to-golden/20 rounded-3xl border-2 border-dashed border-acorn/20 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-6xl mb-2">🐿️</div>
+            <p class="text-sm text-acorn/60 font-mono">squirrel mascot<br/>coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social proof ticker -->
+  <section class="border-y border-bark/10 bg-bark/[0.02] py-6 overflow-hidden">
+    <div class="flex items-center gap-12 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+      {["Built with AI, refined by humans", "Community-driven roadmaps", "Learn anything, your way", "Track real progress", "AI tutor that gets you", "No more tutorial hell", "Built with AI, refined by humans", "Community-driven roadmaps", "Learn anything, your way", "Track real progress", "AI tutor that gets you", "No more tutorial hell"].map((text) => (
+        <span class="text-sm font-mono text-bark/40 flex items-center gap-3">
+          <span class="w-1.5 h-1.5 bg-acorn/30 rounded-full shrink-0"></span>
+          {text}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="py-24 sm:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <p class="font-mono text-sm text-acorn mb-4">THE PROBLEM</p>
+        <h2 class="text-3xl sm:text-4xl font-[family-name:var(--font-display)] mb-6">Tutorial Hell is real.<br/>We've all been there.</h2>
+        <p class="text-bark/60 text-lg">You start with motivation. Then it fragments into 20 browser tabs, 5 bookmarked repos, and a vague sense of guilt. Here's what that looks like:</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="group bg-white/60 backdrop-blur border border-bark/8 rounded-2xl p-8 hover:border-sunset/30 hover:shadow-lg hover:shadow-sunset/5 transition-all">
+          <div class="text-4xl mb-4">📑</div>
+          <h3 class="font-semibold text-lg mb-2">The Tab Hoarder</h3>
+          <p class="text-bark/60 text-sm leading-relaxed">"I'll read this later" you say, opening tab #47. You won't read it later. You'll feel bad about it though.</p>
+          <div class="mt-4 font-mono text-xs text-bark/30 bg-bark/5 rounded-lg p-3">
+            Chrome: 47 tabs<br/>
+            Memory: 12.4 GB<br/>
+            Knowledge gained: 0
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-white/60 backdrop-blur border border-bark/8 rounded-2xl p-8 hover:border-golden/30 hover:shadow-lg hover:shadow-golden/5 transition-all">
+          <div class="text-4xl mb-4">🎬</div>
+          <h3 class="font-semibold text-lg mb-2">The Course Collector</h3>
+          <p class="text-bark/60 text-sm leading-relaxed">Udemy sale? Buy 8 courses. Finish 0. Your "Watch Later" playlist is now a historical archive of abandoned ambitions.</p>
+          <div class="mt-4 font-mono text-xs text-bark/30 bg-bark/5 rounded-lg p-3">
+            Courses bought: 23<br/>
+            Courses completed: 1.5<br/>
+            Spent: $347
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-white/60 backdrop-blur border border-bark/8 rounded-2xl p-8 hover:border-mauve/30 hover:shadow-lg hover:shadow-mauve/5 transition-all">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="font-semibold text-lg mb-2">The Eternal Beginner</h3>
+          <p class="text-bark/60 text-sm leading-relaxed">You've "learned" React 4 times because you keep restarting from scratch every 6 months. Still can't build a todo app without a tutorial open.</p>
+          <div class="mt-4 font-mono text-xs text-bark/30 bg-bark/5 rounded-lg p-3">
+            Times learned React: 4<br/>
+            React apps shipped: 0<br/>
+            Imposter syndrome: MAX
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="how-it-works" class="py-24 sm:py-32 bg-bark text-cream relative overflow-hidden">
+    <!-- Background decorations -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-acorn/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-leaf/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <div class="max-w-2xl mx-auto text-center mb-20">
+        <p class="font-mono text-sm text-golden mb-4">HOW IT WORKS</p>
+        <h2 class="text-3xl sm:text-4xl font-[family-name:var(--font-display)] mb-6">Three steps. No BS.</h2>
+        <p class="text-cream/60 text-lg">From "I want to learn X" to actually learning X. Here's the cheat code.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="text-8xl font-[family-name:var(--font-display)] text-cream/5 absolute -top-8 -left-2">1</div>
+          <div class="relative bg-cream/5 backdrop-blur border border-cream/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-sunset rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-cream" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-3">Pick your quest</h3>
+            <p class="text-cream/60 leading-relaxed">Tell Scurry what you want to learn. "I want to build iOS apps" or "teach me machine learning" or literally anything. Browse community roadmaps or create your own.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative md:mt-12">
+          <div class="text-8xl font-[family-name:var(--font-display)] text-cream/5 absolute -top-8 -left-2">2</div>
+          <div class="relative bg-cream/5 backdrop-blur border border-cream/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-golden rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-bark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-3">AI builds your map</h3>
+            <p class="text-cream/60 leading-relaxed">Scurry's AI creates a structured learning path — the right resources, in the right order, at the right level. No more guessing what to learn next.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative md:mt-24">
+          <div class="text-8xl font-[family-name:var(--font-display)] text-cream/5 absolute -top-8 -left-2">3</div>
+          <div class="relative bg-cream/5 backdrop-blur border border-cream/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-leaf rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-cream" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+            </div>
+            <h3 class="font-semibold text-xl mb-3">Learn. For real.</h3>
+            <p class="text-cream/60 leading-relaxed">Work through your roadmap with an AI tutor that explains things when you're stuck. Track progress. Build projects. Ship things. No more "learning" without doing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-24 sm:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <p class="font-mono text-sm text-acorn mb-4">FEATURES</p>
+        <h2 class="text-3xl sm:text-4xl font-[family-name:var(--font-display)] mb-6">Everything you need.<br/>Nothing you don't.</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: "🗺️", title: "AI Roadmaps", desc: "Tell it what you want to learn. Get a structured path with the best resources, ordered correctly." },
+          { icon: "🤖", title: "AI Tutor", desc: "Stuck on a concept? Ask your AI tutor. It knows your roadmap, your level, and your learning style." },
+          { icon: "🍴", title: "Fork & Remix", desc: "Found a great roadmap? Fork it, customize it, make it yours. Like GitHub but for learning." },
+          { icon: "📊", title: "Real Progress", desc: "Not fake gamification. Actual tracking of what you've learned, built, and shipped." },
+          { icon: "🧠", title: "Use Your Own AI", desc: "One click to export your roadmap to ChatGPT, Claude, or Gemini. Your learning, your tools." },
+          { icon: "👥", title: "Community", desc: "Browse roadmaps built by other learners. Share yours. Learn from people who've been there." },
+        ].map(({ icon, title, desc }) => (
+          <div class="group bg-white/60 backdrop-blur border border-bark/8 rounded-2xl p-6 hover:border-acorn/20 hover:shadow-md transition-all">
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="font-semibold mb-2">{title}</h3>
+            <p class="text-sm text-bark/60 leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations teaser -->
+  <section class="py-24 sm:py-32 bg-cream-dark/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <p class="font-mono text-sm text-acorn mb-4">COMING SOON</p>
+        <h2 class="text-3xl sm:text-4xl font-[family-name:var(--font-display)] mb-6">Your learning, everywhere.</h2>
+        <p class="text-bark/60 text-lg">Scurry plays nice with the tools you already use.</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        {[
+          { name: "Obsidian", desc: "Export to vault" },
+          { name: "Notion", desc: "Sync pages" },
+          { name: "ChatGPT", desc: "One-click prompt" },
+          { name: "Claude", desc: "Deep dive" },
+          { name: "Gemini", desc: "Study sessions" },
+          { name: "NotebookLM", desc: "Push resources" },
+        ].map(({ name, desc }) => (
+          <div class="bg-white border border-bark/8 rounded-xl px-6 py-4 text-center hover:border-acorn/20 hover:shadow-sm transition-all">
+            <div class="font-semibold text-sm">{name}</div>
+            <div class="text-xs text-bark/40 mt-0.5">{desc}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 sm:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-acorn/5 via-transparent to-golden/5"></div>
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl sm:text-5xl font-[family-name:var(--font-display)] mb-6">
+          Ready to stop<br/>collecting and start<br/><span class="text-acorn italic">learning</span>?
+        </h2>
+        <p class="text-bark/60 text-lg mb-10 max-w-md mx-auto">
+          Your future self will thank you. Or at least have fewer tabs open.
+        </p>
+        <a href="https://app.scurry.space" class="group inline-flex items-center gap-3 bg-bark text-cream font-semibold px-10 py-5 rounded-full text-lg hover:scale-105 transition-all shadow-lg shadow-bark/20 hover:shadow-xl hover:shadow-bark/30">
+          Start Learning — It's Free
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m13 7 5 5m0 0-5 5m5-5H6"/></svg>
+        </a>
+        <p class="text-sm text-bark/40 mt-4">No credit card. No commitment. Just learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-bark/10 py-12 bg-bark/[0.02]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-6">
+          <span class="font-[family-name:var(--font-display)] text-xl font-bold text-bark">scurry</span>
+          <span class="text-sm text-bark/40">Learn, Build, Share.</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-bark/50">
+          <a href="https://app.scurry.space" class="hover:text-bark transition-colors">App</a>
+          <a href="https://blog.scurry.space" class="hover:text-bark transition-colors">Blog</a>
+          <a href="https://app.scurry.space/privacy" class="hover:text-bark transition-colors">Privacy</a>
+          <a href="https://app.scurry.space/terms" class="hover:text-bark transition-colors">Terms</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-bark/5 text-center">
+        <p class="text-xs text-bark/30">Built by a squirrel who got tired of hoarding tabs. &copy; {new Date().getFullYear()} Scurry.</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+</style>
