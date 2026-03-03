@@ -126,8 +126,8 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- How it Works -->
-  <section id="how-it-works" class="py-20 sm:py-24 bg-dark-bg text-dark-fg relative overflow-hidden">
+  <!-- How it Works — uses inverted colors via section-dark -->
+  <section id="how-it-works" class="section-dark py-20 sm:py-24 bg-[hsl(210_5%_6%)] text-[hsl(220_14%_94%)] relative overflow-hidden">
     <div class="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
 
@@ -135,40 +135,40 @@ import Layout from '../layouts/Layout.astro';
       <div class="max-w-xl mx-auto text-center mb-16">
         <p class="font-mono text-xs text-accent mb-3 tracking-wide uppercase">How It Works</p>
         <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-4">Three steps. No BS.</h2>
-        <p class="text-dark-muted text-base">From "I want to learn X" to actually learning X.</p>
+        <p class="dark-muted text-[hsl(240_6%_57%)] text-base">From "I want to learn X" to actually learning X.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
         <div class="relative">
-          <div class="text-7xl font-bold text-dark-fg/[0.04] absolute -top-6 -left-1">1</div>
-          <div class="relative bg-dark-card border border-dark-border rounded-xl p-6">
+          <div class="text-7xl font-bold text-white/[0.04] absolute -top-6 -left-1">1</div>
+          <div class="dark-card relative bg-[hsl(220_7%_10%)] border border-[hsl(240_3%_15%)] rounded-xl p-6">
             <div class="w-10 h-10 bg-destructive rounded-lg flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/></svg>
             </div>
             <h3 class="font-semibold text-lg mb-2">Pick your quest</h3>
-            <p class="text-dark-muted text-sm leading-relaxed">Tell Scurry what you want to learn. Browse community roadmaps or create your own from scratch.</p>
+            <p class="text-[hsl(240_6%_57%)] text-sm leading-relaxed">Tell Scurry what you want to learn. Browse community roadmaps or create your own from scratch.</p>
           </div>
         </div>
 
         <div class="relative md:mt-8">
-          <div class="text-7xl font-bold text-dark-fg/[0.04] absolute -top-6 -left-1">2</div>
-          <div class="relative bg-dark-card border border-dark-border rounded-xl p-6">
+          <div class="text-7xl font-bold text-white/[0.04] absolute -top-6 -left-1">2</div>
+          <div class="dark-card relative bg-[hsl(220_7%_10%)] border border-[hsl(240_3%_15%)] rounded-xl p-6">
             <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-accent-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>
             </div>
             <h3 class="font-semibold text-lg mb-2">AI builds your map</h3>
-            <p class="text-dark-muted text-sm leading-relaxed">Scurry's AI creates a structured learning path — the right resources, in the right order, at the right level.</p>
+            <p class="text-[hsl(240_6%_57%)] text-sm leading-relaxed">Scurry's AI creates a structured learning path — the right resources, in the right order, at the right level.</p>
           </div>
         </div>
 
         <div class="relative md:mt-16">
-          <div class="text-7xl font-bold text-dark-fg/[0.04] absolute -top-6 -left-1">3</div>
-          <div class="relative bg-dark-card border border-dark-border rounded-xl p-6">
+          <div class="text-7xl font-bold text-white/[0.04] absolute -top-6 -left-1">3</div>
+          <div class="dark-card relative bg-[hsl(220_7%_10%)] border border-[hsl(240_3%_15%)] rounded-xl p-6">
             <div class="w-10 h-10 bg-success rounded-lg flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
             </div>
             <h3 class="font-semibold text-lg mb-2">Learn. For real.</h3>
-            <p class="text-dark-muted text-sm leading-relaxed">Work through your roadmap with an AI tutor. Track progress. Build projects. Ship things.</p>
+            <p class="text-[hsl(240_6%_57%)] text-sm leading-relaxed">Work through your roadmap with an AI tutor. Track progress. Build projects. Ship things.</p>
           </div>
         </div>
       </div>
@@ -269,22 +269,21 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </footer>
+
+  <!-- Theme toggle — bottom right like Thoughts theme -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <!-- Sun icon (shown in dark mode) -->
+    <svg class="sun-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+    </svg>
+    <!-- Moon icon (shown in light mode) -->
+    <svg class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+    </svg>
+  </button>
 </Layout>
 
 <style>
-  /* Line-draw animation for one-line art SVGs */
-  .line-draw {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw 3s ease-in-out 0.5s forwards;
-  }
-
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
   /* Ticker scroll */
   @keyframes scroll {
     from { transform: translateX(0); }
@@ -293,14 +292,45 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-  // Calculate actual path lengths for precise line-draw animation
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.line-draw').forEach((path) => {
-      if (path instanceof SVGPathElement) {
-        const length = path.getTotalLength();
-        path.style.strokeDasharray = String(length);
-        path.style.strokeDashoffset = String(length);
-      }
-    });
+  // Theme toggle — persists to localStorage, respects system preference
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  function getTheme(): string {
+    const stored = localStorage.getItem('color-scheme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme: string) {
+    if (theme === 'dark') {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+    // Toggle icon visibility
+    const sunIcon = toggle?.querySelector('.sun-icon');
+    const moonIcon = toggle?.querySelector('.moon-icon');
+    if (sunIcon && moonIcon) {
+      sunIcon.classList.toggle('hidden', theme !== 'dark');
+      moonIcon.classList.toggle('hidden', theme === 'dark');
+    }
+  }
+
+  // Apply on load (no flash)
+  applyTheme(getTheme());
+
+  toggle?.addEventListener('click', () => {
+    const current = html.classList.contains('dark') ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('color-scheme', next);
+    applyTheme(next);
+  });
+
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('color-scheme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
   });
 </script>
