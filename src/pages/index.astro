@@ -82,10 +82,6 @@ import Layout from '../layouts/Layout.astro';
         <div class="text-sm text-muted-foreground">
           <strong class="text-foreground font-semibold">500+</strong> roadmaps created
         </div>
-        <span class="hidden sm:block w-px h-5 bg-border"></span>
-        <div class="text-sm text-muted-foreground">
-          <strong class="text-foreground font-semibold">Free</strong> during beta
-        </div>
       </div>
     </div>
   </section>
@@ -245,85 +241,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Squirrel Tokens — new section -->
-  <section class="noise-texture py-24 sm:py-32 bg-surface-dark text-[hsl(220_14%_94%)] relative overflow-hidden">
-    <div class="absolute top-0 left-[20%] w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-[10%] w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
-
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-      <div class="max-w-xl mx-auto text-center mb-16" data-reveal>
-        <p class="font-mono text-xs text-accent mb-3 tracking-wide uppercase">Squirrel Tokens</p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Your learning, your squirrel.</h2>
-        <p class="text-surface-dark-muted text-base">Every roadmap gets a unique line-drawn squirrel token. Hit milestones and watch it evolve.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Default token -->
-        <div class="text-center" data-reveal>
-          <div class="squirrel-token w-32 h-32 mx-auto mb-4 bg-surface-dark-card border border-surface-dark-border rounded-2xl p-4">
-            <img
-              src="/illustrations/squirrel-token-default.svg"
-              alt="Default squirrel token"
-              class="w-full h-full object-contain"
-              onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-4xl opacity-30\'>&#x1F43F;</div>'"
-            />
-          </div>
-          <p class="text-sm font-semibold">Starter</p>
-          <p class="text-xs text-surface-dark-muted">Every roadmap begins here</p>
-        </div>
-
-        <!-- 100 views milestone -->
-        <div class="text-center" data-reveal>
-          <div class="squirrel-token squirrel-token--milestone-100 w-32 h-32 mx-auto mb-4 bg-surface-dark-card border border-accent/20 rounded-2xl p-4">
-            <img
-              src="/illustrations/squirrel-token-default.svg"
-              alt="Bronze squirrel token — 100 views"
-              class="w-full h-full object-contain"
-              onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-4xl opacity-30\'>&#x1F43F;</div>'"
-            />
-          </div>
-          <p class="text-sm font-semibold text-accent">Bronze</p>
-          <p class="text-xs text-surface-dark-muted">100 views</p>
-        </div>
-
-        <!-- 1000 views milestone -->
-        <div class="text-center" data-reveal>
-          <div class="squirrel-token squirrel-token--milestone-1000 w-32 h-32 mx-auto mb-4 bg-surface-dark-card border border-primary/20 rounded-2xl p-4">
-            <img
-              src="/illustrations/squirrel-token-default.svg"
-              alt="Silver squirrel token — 1,000 views"
-              class="w-full h-full object-contain"
-              onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-4xl opacity-30\'>&#x1F43F;</div>'"
-            />
-          </div>
-          <p class="text-sm font-semibold text-primary">Silver</p>
-          <p class="text-xs text-surface-dark-muted">1,000 views</p>
-        </div>
-
-        <!-- 10000 views milestone -->
-        <div class="text-center" data-reveal>
-          <div class="squirrel-token squirrel-token--milestone-10000 w-32 h-32 mx-auto mb-4 bg-surface-dark-card border border-accent/30 rounded-2xl p-4 ring-1 ring-accent/10">
-            <img
-              src="/illustrations/squirrel-token-default.svg"
-              alt="Gold squirrel token — 10,000 views"
-              class="w-full h-full object-contain"
-              onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-4xl opacity-30\'>&#x1F43F;</div>'"
-            />
-          </div>
-          <p class="text-sm font-semibold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Gold</p>
-          <p class="text-xs text-surface-dark-muted">10,000 views</p>
-        </div>
-      </div>
-
-      <div class="mt-12 text-center" data-reveal>
-        <p class="text-sm text-surface-dark-muted max-w-md mx-auto">
-          Pro creators can generate custom squirrel tokens. Seasonal editions drop for holidays — St. Patrick's, Halloween, and more.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Integrations — reframed from "Coming Soon" -->
+  <!-- Integrations -->
   <section class="py-20 sm:py-24 bg-surface-subtle">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="max-w-xl mx-auto text-center mb-12" data-reveal>
@@ -355,11 +273,6 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/5"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 relative">
       <div class="max-w-lg mx-auto text-center">
-        <!-- Celebrating squirrel -->
-        <div class="w-24 h-24 mx-auto mb-6" data-reveal>
-          <img src="/illustrations/squirrel-celebrating.svg" alt="" class="w-full h-full drop-shadow-md" />
-        </div>
-
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4" data-reveal>
           Ready to stop collecting<br/>and start <span class="text-accent">learning</span>?
         </h2>
@@ -372,7 +285,6 @@ import Layout from '../layouts/Layout.astro';
             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m13 7 5 5m0 0-5 5m5-5H6"/></svg>
           </a>
           <p class="text-xs text-muted-foreground mt-3">No credit card. No commitment. Just learning.</p>
-          <p class="text-xs text-muted-foreground mt-1">Free during beta.</p>
         </div>
       </div>
     </div>
