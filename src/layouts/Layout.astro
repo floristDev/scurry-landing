@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = "Scurry — Stop hoarding tabs. Start actually learning.",
-  description = "AI-powered learning roadmaps that turn your chaos of bookmarks, tutorials, and half-finished courses into an actual plan. Then help you stick to it."
+  description = "Community-driven learning roadmaps for cooking, fitness, music, coding, and more. Track your progress and master new skills."
 } = Astro.props;
 ---
 
@@ -30,10 +30,10 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Bricolage Grotesque for headings + Space Mono for code -->
+    <!-- Inter — matches app typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
 
     <title>{title}</title>
 
