@@ -1,56 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  /* Light mode (default) */
+  /* Light mode (default) — aligned with app tokens (constants/tokens.ts) */
   --color-background: hsl(220 16% 97%);
   --color-foreground: hsl(240 28% 14%);
   --color-card: hsl(0 0% 100%);
   --color-card-foreground: hsl(240 28% 14%);
-  --color-primary: hsl(221 55% 44%);
+  --color-primary: hsl(221 57% 53%);
   --color-primary-foreground: hsl(0 0% 100%);
   --color-secondary: hsl(220 18% 95%);
   --color-secondary-foreground: hsl(222 10% 40%);
   --color-muted: hsl(220 18% 95%);
-  --color-muted-foreground: hsl(223 8% 38%);
+  --color-muted-foreground: hsl(223 6% 44%);
   --color-accent: hsl(37 79% 58%);
   --color-accent-foreground: hsl(240 28% 14%);
   --color-destructive: hsl(3 52% 50%);
   --color-success: hsl(137 58% 33%);
   --color-border: hsl(214 13% 90%);
   --color-surface-subtle: hsl(220 14% 96%);
+
+  /* Dark section tokens — uses app dark mode values for embedded dark sections */
   --color-surface-dark: hsl(210 5% 6%);
   --color-surface-dark-card: hsl(220 7% 10%);
   --color-surface-dark-border: hsl(240 3% 15%);
-  --color-surface-dark-muted: hsl(240 6% 57%);
+  --color-surface-dark-muted: hsl(240 7% 60%);
 
-  --font-sans: 'Bricolage Grotesque', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'Space Mono', 'SF Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Roboto Mono', monospace;
 
   --radius: 0.5rem;
 }
 
-/* Dark mode — applied via .dark class on <html> */
+/* Dark mode — aligned with app tokens (global.css .dark:root) */
 .dark {
-  --color-background: hsl(216 10% 10%);
+  --color-background: hsl(210 5% 6%);
   --color-foreground: hsl(220 14% 94%);
-  --color-card: hsl(216 8% 13%);
+  --color-card: hsl(220 7% 10%);
   --color-card-foreground: hsl(220 14% 94%);
   --color-primary: hsl(219 87% 69%);
   --color-primary-foreground: hsl(240 28% 14%);
-  --color-secondary: hsl(216 8% 15%);
+  --color-secondary: hsl(225 8% 13%);
   --color-secondary-foreground: hsl(240 8% 64%);
-  --color-muted: hsl(216 8% 15%);
-  --color-muted-foreground: hsl(240 6% 57%);
+  --color-muted: hsl(225 8% 13%);
+  --color-muted-foreground: hsl(240 7% 60%);
   --color-accent: hsl(38 84% 64%);
   --color-accent-foreground: hsl(240 28% 14%);
   --color-destructive: hsl(4 82% 67%);
   --color-success: hsl(128 49% 49%);
-  --color-border: hsl(216 6% 18%);
-  --color-surface-subtle: hsl(216 8% 12%);
-  --color-surface-dark: hsl(216 10% 7%);
-  --color-surface-dark-card: hsl(216 8% 10%);
-  --color-surface-dark-border: hsl(216 6% 15%);
-  --color-surface-dark-muted: hsl(240 6% 57%);
+  --color-border: hsl(240 3% 15%);
+  --color-surface-subtle: hsl(210 5% 8%);
+  --color-surface-dark: hsl(210 5% 4%);
+  --color-surface-dark-card: hsl(220 7% 8%);
+  --color-surface-dark-border: hsl(240 3% 12%);
+  --color-surface-dark-muted: hsl(240 7% 55%);
 }
 
 /* Animations */
@@ -105,13 +107,13 @@ body {
   color: var(--color-foreground);
 }
 
-/* Headings get the display font treatment */
+/* Headings — tight tracking to match app's Linear-inspired style */
 h1, h2, h3 {
   font-family: var(--font-sans);
   letter-spacing: -0.025em;
 }
 
-/* Card hover */
+/* Card hover — matches app's translateY(-1px) */
 .card-hover {
   transition: box-shadow 0.2s cubic-bezier(0.25, 0.1, 0.25, 1),
               border-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1),
@@ -119,15 +121,16 @@ h1, h2, h3 {
               background-color 0.3s ease;
 }
 .card-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+:root .card-hover:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.1);
 }
 .dark .card-hover:hover {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.4);
-  border-color: hsl(216 6% 22%);
+  border-color: rgba(255,255,255,0.12);
 }
 
-/* Interactive transitions */
+/* Interactive transitions — matches app global.css */
 button, a, [role="button"] {
   transition: background-color 0.15s cubic-bezier(0.25, 0.1, 0.25, 1),
               color 0.15s cubic-bezier(0.25, 0.1, 0.25, 1),
